@@ -1,21 +1,13 @@
-import mysql from 'mysql2/promise';
+import mysql from 'promise-mysql';
+import keys from './keys';
 
-const pool = mysql.createConnection({
-    host:'localhost',
-    user:'root',
-    password:'',
-    database:'monedero',
-    waitForConnections: true,
-    connectionLimit: 10,
-    queueLimit: 0
+const pool = mysql.createPool(keys.database);
+
+pool.getConnection().then(connection => {
+    pool.releaseConnection(connection);
+    console.log('DB is connected');
+}).catch(err => {
+    console.error('Error connecting to the database: ', err);
 });
-
-/* db.connect((err)=>{
-    if(err){
-        console.error('Error conectando a la base de datos:',err);
-        return;
-    }
-    console.log('Conectado a la base de datos MySQL');
-}); */
 
 export default pool;

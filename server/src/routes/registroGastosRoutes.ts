@@ -1,6 +1,6 @@
 // src/routes/registroGastosRoutes.ts
 import { Router, Request, Response } from 'express';
-import db from '../database1';
+import pool from '../database';
 
 const router = Router();
 

@@ -7,6 +7,7 @@ import registroGastosRoutes from './routes/registroGastosRoutes';
 import tipoGastoRoutes from './routes/tipoGastoRoutes';
 import presupuestoRoutes from './routes/presupuestoRoutes';
 import { usuarioRoutes } from './routes/usuarioRoutes';
+import twitterRoutes from './routes/twitterRoutes'
 
 const app = express();
 
@@ -40,6 +41,7 @@ class Server {
         this.app.use('/api/tipoGastos', tipoGastoRoutes);
         this.app.use('/api/presupuestos', presupuestoRoutes);
         this.app.use('/api/usuarios', usuarioRoutes); // Se agrega el prefijo /api
+        this.app.use('/api/twitter', twitterRoutes);
     } 
 
     start(): void {
