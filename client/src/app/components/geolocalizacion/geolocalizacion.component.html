@@ -1,0 +1,9 @@
+<div *ngIf="latitud && longitud">
+    <p>Tu ubicación aproximada es:</p>
+    <p>Latitud: {{ latitud }}</p>
+    <p>Longitud: {{ longitud }}</p>
+  </div>
+  <div *ngIf="!latitud || !longitud">
+    <p>Obteniendo tu ubicación...</p>
+  </div>
+  

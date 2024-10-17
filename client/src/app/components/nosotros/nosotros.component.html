@@ -93,6 +93,16 @@
             <p>lograr nuestros objetivos comunes.</p>
         </div>
     </div>
+
+    <div class="tweets-container">
+        <h3>Últimos Tweets / &#64;ViajesSum2024</h3>
+        <div *ngFor="let tweet of tweets">
+          <p>{{ tweet.tweet_text }}</p>
+          <small>{{ tweet.created_at | date:'short' }}</small>
+          <hr>
+        </div>
+      </div>
+      
     
     <footer class="footer">
         <div class="container-footer">

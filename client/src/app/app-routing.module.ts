@@ -9,6 +9,7 @@ import { RegistroGastoComponent } from './components/registro-gasto/registro-gas
 import { TipoGastoComponent } from './components/tipo-gasto/tipo-gasto.component';
 import { PresupuestoComponent } from './components/presupuesto/presupuesto.component';
 import { authGuard } from './guards/auth.guard';
+import { TweetsComponent } from './components/tweets/tweets.component';
 
 //En esta parte se agregan todas las rutas de los archivos que se vayan creando
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: 'registro-gasto', component: RegistroGastoComponent, canActivate: [authGuard]},
   {path: 'tipos-gasto', component: TipoGastoComponent, canActivate: [authGuard]},
   {path: 'presupuesto', component: PresupuestoComponent, canActivate: [authGuard]},
+  {path: 'tweet', component: TweetsComponent},
   {path: '', redirectTo:'', pathMatch:'full'}
 ];
 

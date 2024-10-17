@@ -1,19 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { PositionStackService } from '../../services/positionstack.service';  // Ajusta la ruta si es necesario
+import { PositionStackService } from '../../services/positionstack.service'; // Ajusta la ruta según tu estructura
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']  // Corregido: styleUrls en plural
+  selector: 'app-geolocalizacion',
+  templateUrl: './geolocalizacion.component.html',
 })
-export class HomeComponent implements OnInit {
+export class GeolocalizacionComponent implements OnInit {
   latitud: number | undefined;
   longitud: number | undefined;
 
   constructor(private positionStackService: PositionStackService) {}
 
   ngOnInit(): void {
-    // Llamar al servicio para obtener la ubicación del usuario
     this.positionStackService.getGeolocationByIP().then(data => {
       if (data && data.data.length > 0) {
         const location = data.data[0];

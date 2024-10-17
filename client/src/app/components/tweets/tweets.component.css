@@ -1,0 +1,39 @@
+.tweets-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 3px solid #333; /* Marco más grueso para el contenedor */
+  }
+  
+  .tweets-container h3 {
+    color: #333;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para la tabla */
+  .tweets-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid black; /* Borde de la tabla más grueso */
+  }
+  
+  .tweets-table td {
+    padding: 10px;
+    border: 1px solid black; /* Líneas de separación negras */
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .tweets-table td:first-child {
+    width: 70%; /* Ajuste de ancho de la primera columna (texto del tweet) */
+  }
+  
+  .tweets-table td:last-child {
+    width: 30%; /* Ajuste de ancho de la segunda columna (fecha) */
+    font-size: 12px;
+    color: #888;
+  }
+  

@@ -56,3 +56,11 @@ INSERT INTO TipoGasto VALUES (2,'Transporte');
 INSERT INTO TipoGasto VALUES (3,'Viaticos');
 INSERT INTO TipoGasto VALUES (4,'Servicio(agua,luz,gas)');
 INSERT INTO TipoGasto VALUES (5,'Otro');
+
+DROP TABLE IF EXISTS tweets;
+CREATE TABLE tweets (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    tweet_id VARCHAR(255) NOT NULL,
+    tweet_text TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

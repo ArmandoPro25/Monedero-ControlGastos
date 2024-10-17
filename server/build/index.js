@@ -7,10 +7,8 @@ const express_1 = __importDefault(require("express"));
 const morgan_1 = __importDefault(require("morgan"));
 const cors_1 = __importDefault(require("cors"));
 // Importación de rutas para su uso dentro de la base de datos
-const registroGastosRoutes_1 = __importDefault(require("./routes/registroGastosRoutes"));
-const tipoGastoRoutes_1 = __importDefault(require("./routes/tipoGastoRoutes"));
-const presupuestoRoutes_1 = __importDefault(require("./routes/presupuestoRoutes"));
 const usuarioRoutes_1 = require("./routes/usuarioRoutes");
+const twitterRoutes_1 = __importDefault(require("./routes/twitterRoutes"));
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 class Server {
@@ -33,10 +31,8 @@ class Server {
     }
     routes() {
         // Define las rutas
-        this.app.use('/api/registroGastos', registroGastosRoutes_1.default);
-        this.app.use('/api/tipoGastos', tipoGastoRoutes_1.default);
-        this.app.use('/api/presupuestos', presupuestoRoutes_1.default);
         this.app.use('/api/usuarios', usuarioRoutes_1.usuarioRoutes); // Se agrega el prefijo /api
+        this.app.use('/api/twitter', twitterRoutes_1.default);
     }
     start() {
         this.app.listen(this.app.get('port'), () => {

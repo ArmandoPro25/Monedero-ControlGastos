@@ -15,6 +15,8 @@ import { RegistroGastoComponent } from './components/registro-gasto/registro-gas
 import { TipoGastoComponent } from './components/tipo-gasto/tipo-gasto.component';
 import { PresupuestoComponent } from './components/presupuesto/presupuesto.component';
 import { CostosService } from './services/costos.service';
+import { GeolocalizacionComponent } from './components/geolocalizacion/geolocalizacion.component';
+import { TweetsComponent } from './components/tweets/tweets.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { CostosService } from './services/costos.service';
     RegistroGastoComponent,
     TipoGastoComponent,
     PresupuestoComponent,
+    GeolocalizacionComponent,
+    TweetsComponent,
   ],
   imports: [
     BrowserModule,
